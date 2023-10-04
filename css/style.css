@@ -54,14 +54,13 @@ body {
 /* COLS */
 /* FRIENDS COL */
 .friends-col {
-    /* DEBUG */
-    background-color: var(--primary-col);
+    
     max-height: 80vh;
-    /* overflow-y: scroll; */
     min-width: 30%;
 }
 
 .friends-col-header {
+    background-color: var(--primary-col);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -70,7 +69,7 @@ body {
 }
 .friends-chat-part{
     overflow-y: scroll;
-    max-height: 50vh;
+    max-height: 51vh;
     background-color: white;
 }
 /* HEADER */
@@ -98,23 +97,25 @@ body {
 .blue-banner {
     background-color: var(--blue-banner-col);
     display: flex;
-    justify-content: space-between;
+    justify-content:flex-start;
     padding-top: 11px;
     padding-bottom: 11px;
     padding-left: 5px;
     padding-right: 5px;
-    max-height: 10vh;
+    
 }
 
 .fa-bell-slash {
     background-color: white;
-    border-radius: 78%;
+    border-radius: 50%;
     width: 40px;
     height: 40px;
     text-align: center;
     padding-top: 10px;
     color: var(--blue-banner-col);
     font-size: 20px;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 
@@ -122,6 +123,7 @@ body {
 /* /BLUE BANNER */
 /* INPUT BLOCK */
 .input-block {
+    background-color: var(--primary-col);
     min-height: 10vh;
     text-align: center;
     padding-top: 4px;
@@ -150,6 +152,16 @@ body {
 
 
 /* MEDIAQUERY */
+@media screen and (max-width: 1440px){
+    .friends-chat-part{
+        max-height: 53vh;
+    }
+}
+@media screen and (max-width: 1024px){
+    .friends-chat-part{
+        max-height: 51vh;
+    }
+}
 @media screen and (max-width: 780px) {
     .friends-col {
         min-width: 10%;
@@ -159,8 +171,9 @@ body {
     }
     .friends-chat-part{
         max-height: fit-content;
+       
     }
-
+  
     .header-icons,
     .blue-banner,
     .input-block,
@@ -213,7 +226,37 @@ body {
     background-image: url(img/mine.jpg);
     min-height: 60vh;
 }
-
+.green-sms {
+    background-color: var(--green-sms-col);
+    width: 50%;
+    border-radius:10px;
+    padding: .5rem;
+    max-height: 25vh;
+}
+.white-sms{
+    background-color: white;
+    width: 50%;
+    border-radius: 10px;
+    padding: 0.5rem;
+    max-height: 25vh;
+    /* position: relative;
+    top: 30px;
+    /* right: 300px; */
+}
+.sms-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 1rem;
+  
+   
+}
+.sms-container-white {
+    padding: 1rem;
+}
+.chat-col-main{
+    overflow-y: scroll;
+}
 
 /* MAIN */
 /* FOOTER */
@@ -223,7 +266,9 @@ footer{
     justify-content: space-between;
     align-items: center;
     min-height: 10vh;
-    padding: .5rem;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 footer a{
     color: #6B7376;
@@ -231,8 +276,12 @@ footer a{
     font-size: 20px;
 }
 .input-text-footer{
-    width:
+    width: 85%;
+    height: 2.5rem;
+    
+
 }
+
 /* /FOOTER */
  @media screen and (max-width: 768px){
     .chat-col main {
@@ -243,8 +292,15 @@ footer a{
 
  }
  @media screen and (max-width: 425px){
-    .chat-col-icons{
+    .chat-col-icons,
+    footer a{
         display: none;
+    }
+    .input-text-footer{
+        width: 100%;
+    }
+    .white-sms{
+        max-height: 35vh;
     }
  }
 /* /CHAT COL */
