@@ -15,20 +15,13 @@
 img{
     max-width: 100%;
 }
-/* CONTAINERS */
-.wrapper {
-    width: 100%;
-    height: 100vh;
-    padding: 2rem;
-    /* DEBUG */
-    background-color: var(--blue-banner-col);
-}
+/* CONTAINER */
 .container {
-    width: 90%;
-    min-height: 80vh;
-    margin: 0 50px 0;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
     /* DEBUG */
-    background-color: aquamarine;
+    background-color:violet;
 }
 /* /CONTAINERS */
 
@@ -36,23 +29,47 @@ img{
     /* ROW */
     .row{
         display: flex;
+        padding: 2rem;
     }
+        @media screen and (max-width: 780px){
 
-    /* FRIENDS COL */
+            .row{
+                display: flex;
+                padding: 0;
+                width: 100%;
+                height: 100vh;
+            }
+
+        }
+
+    /* COLS */
+
      .friends-col{
         /* DEBUG */
         background-color: aqua;
-        min-width: 30%;
         min-height: 80vh;
      }
-
-    /* /FRIENDS COL */
-    /* CHAT COL */
-    .chat-col {
+     .chat-col {
         /* DEBUG */
         background-color: blueviolet;
-        min-width: 60%;
+        min-width: 70%;
         min-height: 80vh;
     }
 
-    /* /CHAT COL */
+     @media screen and (max-width: 780px){
+       .friends-col{
+        max-width: 15%;
+
+       }
+       
+     }
+     @media screen and (max-width: 375px){
+        .friends-col {
+            display: none;
+        }
+     }
+
+    /* /COLS */
+   
+
+    
