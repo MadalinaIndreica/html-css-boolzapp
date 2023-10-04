@@ -1,0 +1,58 @@
+:root {
+    /* Palette */
+  --primary-col: #EAEAEA;
+  --icons-col: #B1B1B1;
+  --green-sms-col: #D5F9BA;
+  --blue-banner-col:#8EDAFC;
+
+}
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img{
+    max-width: 100%;
+}
+/* CONTAINERS */
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    padding: 2rem;
+    /* DEBUG */
+    background-color: var(--blue-banner-col);
+}
+.container {
+    width: 90%;
+    min-height: 80vh;
+    margin: 0 50px 0;
+    /* DEBUG */
+    background-color: aquamarine;
+}
+/* /CONTAINERS */
+
+/* ROW AND COLS PROPRIETIES */
+    /* ROW */
+    .row{
+        display: flex;
+    }
+
+    /* FRIENDS COL */
+     .friends-col{
+        /* DEBUG */
+        background-color: aqua;
+        min-width: 30%;
+        min-height: 80vh;
+     }
+
+    /* /FRIENDS COL */
+    /* CHAT COL */
+    .chat-col {
+        /* DEBUG */
+        background-color: blueviolet;
+        min-width: 60%;
+        min-height: 80vh;
+    }
+
+    /* /CHAT COL */
