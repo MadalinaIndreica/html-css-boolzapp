@@ -55,8 +55,8 @@ body {
 /* FRIENDS COL */
 .friends-col {
     
-    max-height: 80vh;
-    min-width: 30%;
+    height: 80vh;
+    min-width: 35%;
 }
 
 .friends-col-header {
@@ -91,6 +91,9 @@ body {
 
 /* MAIN */
 /* BLUE BANNER */
+.friends-col main {
+    height: calc(100% - 60px);
+}
 .blue-banner {
     background-color: var(--blue-banner-col);
     display: flex;
@@ -122,9 +125,7 @@ body {
 /* INPUT BLOCK */
 .input-block {
     background-color: var(--primary-col);
-    min-height: 10vh;
     text-align: center;
-    padding-top: 4px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -146,24 +147,31 @@ body {
     justify-content: space-evenly;
     align-items: center;
     padding: .5rem;
+    border-bottom: 1px solid var(--primary-col);
 }
 .friends-chat-part{
     overflow-y: scroll;
-    /* max-height: 48vh; */
     background-color: white;
-    height: calc(100% - 60px - 70px - 50px);
+    height: calc(100% - 70px - 50px);
 }
+
 
 
 /* MEDIAQUERY */
 @media screen and (max-width: 1440px){
     .friends-chat-part{
-        max-height: 49vh;
+        height: calc(100% - 70px - 50px);
+    }
+    .input-block{
+        height: 68px;
     }
 }
 @media screen and (max-width: 1024px){
     .friends-chat-part{
-        max-height: 48vh;
+        height: calc(100% - 70px - 50px);
+    }
+    .input-block{
+        height: 50px;
     }
 }
 @media screen and (max-width: 780px) {
@@ -174,14 +182,15 @@ body {
 
     }
     .friends-chat-part{
-        max-height: fit-content;
+        height: 100%;
        
     }
   
     .header-icons,
     .blue-banner,
     .input-block,
-    .friends-chat-text {
+    .friends-chat-text, 
+    .hour{
         display: none;
     }
 
@@ -199,8 +208,8 @@ body {
 /* CHAT COL */
 .chat-col {
     /* DEBUG */
-    min-width: 70%;
-    min-height: 80vh;
+    min-width: 65%;
+    height: 80vh;
 }
 /* HEADER */
 .chat-col-header{
@@ -209,7 +218,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 5px;
-    /* padding-left: 10px; */
+    height: 60px;
 }
 
 .chat-col-icons a {
@@ -228,7 +237,7 @@ body {
 /* MAIN */
 .chat-col main {
     background-image: url(img/mine.jpg);
-    min-height: 60vh;
+    height: calc(100% - 60px - 60px);
 }
 .green-sms {
     background-color: var(--green-sms-col);
@@ -273,6 +282,7 @@ footer{
     padding: 0.5rem;
     padding-left: 1rem;
     padding-right: 1rem;
+    height: 60px;
 }
 footer a{
     color: #6B7376;
@@ -289,7 +299,7 @@ footer a{
 /* /FOOTER */
  @media screen and (max-width: 768px){
     .chat-col main {
-        min-height: 80vh;
+        min-height: 100%;
     }
 
 
