@@ -66,12 +66,9 @@ body {
     align-items: center;
     padding: 5px;
     padding-left: 10px;
+    height: 60px;
 }
-.friends-chat-part{
-    overflow-y: scroll;
-    max-height: 51vh;
-    background-color: white;
-}
+
 /* HEADER */
 .header-icons {
     color: var(--icons-col);
@@ -102,6 +99,7 @@ body {
     padding-bottom: 11px;
     padding-left: 5px;
     padding-right: 5px;
+    height: 70px;
     
 }
 
@@ -130,6 +128,7 @@ body {
     display: flex;
     justify-content: space-around;
     align-items: center;
+    height: 50px;
 }
 .fa-magnifying-glass{
     color: var(--icons-col);
@@ -148,18 +147,23 @@ body {
     align-items: center;
     padding: .5rem;
 }
-
+.friends-chat-part{
+    overflow-y: scroll;
+    /* max-height: 48vh; */
+    background-color: white;
+    height: calc(100% - 60px - 70px - 50px);
+}
 
 
 /* MEDIAQUERY */
 @media screen and (max-width: 1440px){
     .friends-chat-part{
-        max-height: 53vh;
+        max-height: 49vh;
     }
 }
 @media screen and (max-width: 1024px){
     .friends-chat-part{
-        max-height: 51vh;
+        max-height: 48vh;
     }
 }
 @media screen and (max-width: 780px) {
