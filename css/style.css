@@ -106,6 +106,11 @@ body {
     align-items: center;
     
 }
+.blue-banner-text div:last-child{
+    color:gray;
+    text-decoration: underline;
+    font-size: 15px;
+}
 
 .fa-bell-slash {
     background-color: white;
@@ -170,10 +175,11 @@ body {
     background-color: var(--primary-col);
 }
 
+
 /* MEDIAQUERY */
 @media screen and (max-width: 1440px){
     .friends-chat-part{
-        height: calc(100% - 70px - 50px);
+        height: calc(100% - 70px - 68px);
     }
     .input-block{
         height: 68px;
@@ -232,6 +238,7 @@ body {
     align-items: center;
     padding: 5px;
     height: 60px;
+    border-left: 0.5px solid var(--icons-col);
 }
 
 .chat-col-icons a {
@@ -246,6 +253,9 @@ body {
     justify-content: space-between;
     align-items: center;
 }
+.contact-name div{
+    color: #6B7376;
+}
 /* /HEADER */
 /* MAIN */
 .chat-col main {
@@ -257,7 +267,7 @@ body {
     width: 50%;
     border-radius:10px;
     padding: .5rem;
-    max-height: 25vh;
+    display: inline-block;
     
    
 }
@@ -266,7 +276,7 @@ body {
     width: 50%;
     border-radius: 10px;
     padding: 0.5rem;
-    max-height: 25vh;
+    display: inline-block;
   
 }
 .sms-container{
@@ -292,7 +302,42 @@ body {
    color:var(--icons-col);
    font-size: 10px;
 }
+/* DROPDOWN */
+.dropdown {
+    position: relative;
+    
+}
+.chevron-dropdown {
+    
+    color:var(--icons-col);
+    border: none;
+    text-align: right;
+    
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    top: 7px;
+    right: 3px;
+    background-color: #f1f1f1;
+    min-width: 200px;
+    min-height: 60px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    padding: .5rem;
+    text-align: center;
+    padding-bottom: .5rem;
+  }
+  .dropdown-content div a{
+    text-decoration: none;
+    color: black;
+    display: inline-block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
 
+  
+  .dropdown:hover .dropdown-content {display: block;}
 /* MAIN */
 /* FOOTER */
 footer{
@@ -335,8 +380,6 @@ footer a{
     .input-text-footer{
         width: 100%;
     }
-    .white-sms{
-        max-height: 35vh;
-    }
+    
  }
 /* /CHAT COL */
