@@ -103,6 +103,7 @@ body {
     padding-left: 5px;
     padding-right: 5px;
     height: 70px;
+    align-items: center;
     
 }
 
@@ -139,7 +140,9 @@ body {
     min-height: 5vh;
     padding-right: .5rem;
 }
-
+.input-block input:focus-visible{
+    outline: none;
+}
 /* /INPUT BLOCK */
 /* FRIENDS CHAT */
 .friends-chat {
@@ -155,7 +158,17 @@ body {
     height: calc(100% - 70px - 50px);
 }
 
-
+.friends-chat-text span{
+    color: #6B7376;
+}
+.friends-chat .hour{
+    color: #6B7376;
+    align-self: self-start;
+    font-size: 13px;
+}
+.friends-chat:hover {
+    background-color: var(--primary-col);
+}
 
 /* MEDIAQUERY */
 @media screen and (max-width: 1440px){
@@ -245,6 +258,8 @@ body {
     border-radius:10px;
     padding: .5rem;
     max-height: 25vh;
+    
+   
 }
 .white-sms{
     background-color: white;
@@ -252,9 +267,7 @@ body {
     border-radius: 10px;
     padding: 0.5rem;
     max-height: 25vh;
-    /* position: relative;
-    top: 30px;
-    /* right: 300px; */
+  
 }
 .sms-container{
     display: flex;
@@ -269,6 +282,15 @@ body {
 }
 .chat-col-main{
     overflow-y: scroll;
+}
+.chevron{
+   text-align: right;
+   color:var(--icons-col);
+}
+.sms-time {
+   text-align:right;
+   color:var(--icons-col);
+   font-size: 10px;
 }
 
 /* MAIN */
